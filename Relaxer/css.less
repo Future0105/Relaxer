@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+    background: url(./img.jpg) no-repeat center center/cover;
+    color: #fff;
+
+    .big {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 400px;
+        // background-color: pink;
+        z-index: -10;
+
+
+
+        .xin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            color: #acb0b4;
+            font-size: 20px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(1, 15, 28, );
+            border-radius: 50%;
+        }
+
+        .huan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background: conic-gradient(#54b6a3 0%,
+                    #4ca493 40%,
+                    #ffffff 40%,
+                    #ffffff 60%,
+                    #336d61 60%,
+                    #2a5b52 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .wai {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            // background-color: aqua;
+            border-radius: 50%;
+            transform-origin: center center;
+            animation: huanRao 7.5s linear forwards infinite;
+            z-index: -5;
+
+            .yuan {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+.da {
+    animation: da 3s linear forwards;
+}
+
+.xiao {
+    animation: xiao 3s linear forwards;
+}
+
+@keyframes da {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes xiao {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes huanRao {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
